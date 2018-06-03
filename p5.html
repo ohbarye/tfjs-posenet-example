@@ -2,6 +2,7 @@
 <head>
     <script src="https://unpkg.com/@tensorflow/tfjs"></script>
     <script src="https://unpkg.com/@tensorflow-models/posenet"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
 </head>
 
 <body>
@@ -10,7 +11,7 @@
     </div>
 </body>
 
-<script>
+<script type="text/javascript">
   var canvas = document.getElementById('my-canvas');
   var ctx = canvas.getContext('2d');
   var img = new Image();
@@ -38,5 +39,15 @@
         });
       });
   };
+  function setup() {
+    console.log('setup')
+    createCanvas(400, 400);
+    noLoop();
+  }
+
+  function draw() {
+    console.log('draw')
+    background(Math.random() * 255);
+  }
 </script>
 </html>
